@@ -1,0 +1,89 @@
+$fond: #ebeff1;
+@import "./assets/scss/mixin.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background: $fond;
+  .container {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+  .Header {
+    background: #263338;
+    height: auto;
+    display: flex;
+    margin-bottom: 60px;
+    .head {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+      width: 100%;
+      .Logo {
+        img {
+          width: 180px;
+          height: auto;
+        }
+      }
+      .User {
+        @include center;
+        p {
+          margin-right: 10px;
+          color: white;
+        }
+        .userIcon {
+          width: 50px;
+          height: 50px;
+          background: white;
+          border-radius: 50%;
+          @include center;
+          svg {
+            width: 30px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+  .oneAcount {
+    width: 100%;
+    margin-bottom: 60px;
+    .nameAccount {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      padding: 10px 30px;
+      border-radius: 5px;
+      color: white;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .operations:nth-child(2n) {
+      background: #e4e6e8;
+    }
+    .operations {
+      background: white;
+      color: black;
+      display: flex;
+      padding: 8px 30px;
+      max-width: calc(850px - 30px);
+      border-radius: 5px;
+      margin: 0 auto;
+      > p {
+        margin-right: 15px;
+        color: rgb(105, 103, 103);
+        font-size: 15px;
+      }
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
